@@ -22,13 +22,11 @@ void location(){
 	int86(0x33,&in,&out);
 
 	if(out.x.bx==1){
-
-       x=out.x.cx;
-       y=out.x.dx;
-
-
+      	     x=out.x.cx;
+       	     y=out.x.dx;
 	break;
-	}             }
+	}             
+      }
 
 	while(!kbhit()){
 	in.x.ax=3;
@@ -44,8 +42,7 @@ void location(){
        if(out.x.bx==2){
        break;
        }
-
-}     //	return a;
+    }     //	return a;
 }
 
 
@@ -72,7 +69,6 @@ void blend(){
 
 	}
 
-
       }
       if(out.x.bx==1){
 	x2=out.x.cx;
@@ -87,10 +83,6 @@ void blend(){
 
 	}
        }
-
-
-
-
 
      }
 
@@ -108,8 +100,6 @@ void main(){
        //	printf("%d , %d",a[0],a[1]);
 
 	blend();
-
-
 
 	getch();
 }
