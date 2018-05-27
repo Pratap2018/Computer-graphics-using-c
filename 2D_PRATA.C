@@ -3,18 +3,13 @@
 #include<conio.h>
 #include<dos.h>
 #include<graphics.h>
-
 # define absx(x) x+280
 # define absy(y) 240-y
-
-
 
 #define thita(x) x*3.14/180
 
 union REGS in,out;
-
 /////////////////////////////////////////////////////////////////////////////////
-
 
 int select(){
 int x,y;
@@ -74,7 +69,6 @@ while(!kbhit()){
  return  0;
 }
 
-
 ///*********************************************************///
 
 int rs(){
@@ -110,10 +104,7 @@ while(!kbhit()){
     return 0;
 }
 
-
 //******************************************************///
-
-
 
 ////////////////////////////////////////////////////////////////////////
 void panel(){
@@ -142,8 +133,6 @@ in.x.ax=1;
 int86(0x33,&in,&out);
 
 }
-
-
 
 //////////////////////////////////////////////////////////////////////////////
 
@@ -278,14 +267,7 @@ void scale(int c){
 	}else
 	line(absx(r[0][i]),absy(r[1][i]),absx(r[0][i+1]),absy(r[1][i+1]));
 	 }
-
-
 	}
-
-
-
-
-
 
 void getob(int c){
 
@@ -617,7 +599,6 @@ S:     printf("Enter the number of vertices :");
 	}while(s!=6);
 
        getch();
-
 
 
  return 0;
